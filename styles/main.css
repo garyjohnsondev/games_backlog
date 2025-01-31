@@ -1,3 +1,78 @@
-body {
+header {
+  margin: auto 0;
+}
+
+.main_content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
   
+  padding: 25px;
+}
+
+#navigation_box {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal_list {
+  list-style: none;
+}
+
+.horizontal_list li {
+  display: inline-block;
+
+  padding: 0px 20px;
+}
+
+.search_container {
+  position: relative;
+}
+
+.search_container .search_button {
+  position: absolute;
+  cursor: pointer;
+
+  top: 0;
+  right: 0;
+
+  /* TODO: Change input value to a search icon instead of the word "Search". I think 'backgroung-img' is how to do that. */
+}
+
+#backlog_container {
+  display: flex;
+
+  padding: 25px;
+}
+
+#backlog_data_container {
+  border: 1px solid black;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#game_selector_container {
+  border: 1px solid black;
+  flex: 1;
+}
+
+#backlog_data_table {
+  height: 500px;
+  width: 60%;
+  
+  overflow: scroll;
+
+  align-items: start;
+
+  flex: 1;
+}
+
+#backlog_data_table tr > th + tr > td {
+  /* TODO: Apply a fixed width to the columns in the table */
+}
+
+#game_selector_box {
+  border: 1px solid black;
 }

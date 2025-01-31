@@ -1,0 +1,21 @@
+# Workspace
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Sensitive data
+secrets/
+api_keys/
+*.env
+
+# Database and Schema files
+*.sql
+*.db
+
+# Logs
+*.log
+temp/
+
+# Test files
+*.test

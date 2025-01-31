@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link >
-    <title>Backlog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Backlog</title>
 </head>
 <header>
-    <div class="horizontal_container" id="navigation_box">
-        <ul class="horizontal_list">
-            <li class="navigation_item">Backlog</li>
-            <li class="navigation_item">Wishlist</li>
-            <li class="navigation_item">Other...</li>
-        </ul>
-    </div>
+  <div class="horizontal_container" id="navigation_box">
+    <ul class="horizontal_list">
+      <li class="navigation_item">Backlog</li>
+      <li class="navigation_item">Wishlist</li>
+      <li class="navigation_item">Other...</li>
+    </ul>
+  </div>
 </header>
-<body>
-    <div class="main_content" id="backlog_page" style="display: block;">
-        <label for="search_bar">Search: </label>
-        <input id="search_bar" />
-        
-        <div class="vertical_container" id="backlog_container">
-            <table id="backlog_table" style="border: 1px solid black;">
-                <tr>
-                    <th></th>
-                    <th>Game Title</th>
-                    <th>Platform</th>
-                    <th>Retail Price</th>
-                    <th>Story Time</th>
-                    <th>100% Time</th>
-                    <th>Interest</th>
-                    <th>Status</th>
-                    <th>Rating</th>
-                </tr>
-                <tr>
+<body onload="">
+  <div class="main_content" id="backlog_page" style="display: block;">
+    <span class="search_container">  
+      <input type="text" id="backlog_search_bar" name="" placeholder="Search for a game..."/>  
+      <input type="button" id="backlog_search_button" class="search_button" value="Search" />
+    </span>
+    
+    <div class="horizontal_container" id="backlog_container">
+      <div class="vertical_container" id="backlog_data_container">
+        <table id="backlog_data_table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Game Title</th>
+              <th scope="col">Platform</th>
+              <th scope="col">Retail Price</th>
+              <th scope="col">Story Time</th>
+              <th scope="col">100% Time</th>
+              <th scope="col">Interest</th>
+              <th scope="col">Status</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+          <tbody>   
+            <!-- Add scope="row" to the first cell in each row of the body. -->
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <!-- ... -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="horizontal_container" id="game_selector_container">
+          <canvas id="game_selector_box" height="150" width="300"></canvas>
+      </div>
+    </div>  
+  </div>
+  <div class="main_content" id="wishlist_container" style="display: none;">
 
-                </tr>
-            </table>
-        </div>
-        <div class="horizontal_container" id="game_selector_container">
-            <canvas></canvas>
-        </div>
-    </div>
-    <div class="main_content" id="wishlist_container" style="display: none;">
+  </div>
+  <div class="main_content" id="other_container" style="display: none;">
 
-    </div>
-    <div class="main_content" id="other_container" style="display: none;">
-
-    </div>
+  </div>
 </body>
 <footer></footer>
 </html>
